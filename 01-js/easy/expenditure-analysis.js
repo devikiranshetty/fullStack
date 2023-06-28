@@ -24,7 +24,7 @@ function calculateTotalSpentByCategory(transactions) {
         }
       catAdded=false;  
       }
-      if (catAdded=false){
+      if (catAdded==false){
         catArray.push({category:transactions[j].category,totalSpent:transactions[j].price})
       }
     }
