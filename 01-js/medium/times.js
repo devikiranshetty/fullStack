@@ -7,6 +7,22 @@ Try running it for
 Hint - use Date class exposed in JS
 */
 
-function calculateTime(n) {
-    return 0.01;
+function Sum(n){
+    var total =0;
+    for (var i=1;i<=n;i++){
+        total +=i;
+    }
+    return total;
 }
+
+function calculateTime(n) {
+    starttime = new Date();
+    console.log(starttime);
+    Sum(n);
+    endtime = new Date();
+    //console.log(total);
+    console.log(endtime)
+    return (endtime-starttime);
+}
+
+console.log(calculateTime(1000000000)/1000 + "  Seconds");
