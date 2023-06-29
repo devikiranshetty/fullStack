@@ -12,7 +12,31 @@
 */
 
 class Todo {
+  constructor(){
+    this.taskMaster=[];
+  }
 
+  add(task){
+    this.taskMaster.push(task)
+  }
+
+  remove(indexOfTodo){this.taskMaster.splice(indexOfTodo,1)}
+
+  update(indexOfTodo,newTask){
+    if (indexOfTodo<this.taskMaster.length){
+      this.taskMaster[indexOfTodo]=newTask
+    }
+  }
+
+  getAll(){return(this.taskMaster)}
+  
+  get(indexOfTodo){
+    if (indexOfTodo>=this.taskMaster.length){
+      return null
+    }else{
+    return(this.taskMaster[indexOfTodo])}
+  }
+  clear(){this.taskMaster=[]}
 }
 
 module.exports = Todo;
